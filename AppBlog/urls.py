@@ -2,10 +2,9 @@ from django.urls import path
 from AppBlog import views
 
 urlpatterns = [
-    path('', views.inicio),
-    path('Inicio', views.inicio),
-    path('Peliculas', views.peliculas),
-    path('Series', views.series),
-    path('Generos', views.generos),
-    path('Busqueda', views.busqueda),
+    path('', views.inicio, name="Inicio"),
+    path('Peliculas', views.peliculas, name="Peliculas"),
+    path('Series', views.series, name="Series"),
+    path('Generos', views.generos, name="Generos"),
+    path('Busqueda', views.busqueda, name="Busqueda"),
 ]
