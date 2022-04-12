@@ -12,3 +12,6 @@ def series(request):
 
 def generos(request):
     return render(request, "AppBlog/templateGenero.html")
+
+def busqueda(request):
+    return render(request, "AppBlog/templateBusqueda.html")

@@ -7,4 +7,5 @@ urlpatterns = [
     path('Peliculas', views.peliculas),
     path('Series', views.series),
     path('Generos', views.generos),
+    path('Busqueda', views.busqueda),
 ]
