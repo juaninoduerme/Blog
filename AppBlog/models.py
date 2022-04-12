@@ -10,7 +10,7 @@ class Pelicula(models.Model):
     nombreOriginal = models.CharField(max_length=100)
     nombreTraduccion = models.CharField(max_length=100)
     fechaDeEstreno = models.DateField()
-    genero = models.ForeignKey(Genero)
+    genero = models.ForeignKey(Genero, on_delete=models.CASCADE)
     director = models.CharField(max_length=100)
     guionista = models.CharField(max_length=100)
     
@@ -19,6 +19,6 @@ class Serie(models.Model):
     nombreOriginal = models.CharField(max_length=100)
     nombreTraduccion = models.CharField(max_length=100)
     fechaDeEstreno = models.DateField()
-    genero = models.ForeignKey(Genero)
+    genero = models.ForeignKey(Genero, on_delete=models.CASCADE)
     guionista = models.CharField(max_length=100)
-    temporadasEmitidas = models.DecimalField()
+    temporadasEmitidas = models.IntegerField()
