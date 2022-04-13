@@ -5,6 +5,7 @@ Para iniciar el proyecto:
 1. git clone https://github.com/juaninoduerme/Blog.git
 2. cd Blog
 3. python manage.py runserver
+4. entrar a http://127.0.0.1:8000/AppBlog/
 
 Dentro del proyecto:
 En la barra de navegación encontrarás las siguientes opciones:
