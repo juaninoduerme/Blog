@@ -1,0 +1,15 @@
+{% extends "AppBlog/templatePadre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+    <!--Template Búsqueda de Películas-->
+
+    <h1>Búsqueda</h1>
+    <h2>Busca tu película favorita</h2>
+
+    <form action="/AppBlog/Buscar" method="GET">
+        <p>Nombre Original: <input type="text" name="nombreOriginal" id="nombreOriginal"></p>
+        <input type="submit" value="Buscar">
+    </form>
+    
+{% endblock %}

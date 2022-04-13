@@ -9,5 +9,6 @@ urlpatterns = [
     path('Series Formulario', views.seriesFormulario, name="SeriesFormulario"),
     path('Videos', views.videos, name="Videos"),
     path('Videos Formulario', views.videosFormulario, name="VideosFormulario"),
-    path('Busqueda', views.busqueda, name="Busqueda"),
+    path('Busqueda de Películas', views.busqueda, name="BusquedaPelicula"),
+    path('Buscar', views.buscar),
 ]

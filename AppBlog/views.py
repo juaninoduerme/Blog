@@ -1,3 +1,5 @@
+from django.http.request import QueryDict
+from django.http import HttpResponse
 from django.shortcuts import render
 from AppBlog.models import Pelicula, Serie, Video
 from AppBlog.forms import PeliculaFormulario, SerieFormulario, VideoFormulario
@@ -65,4 +67,14 @@ def videosFormulario(request):
     return render(request, "AppBlog/templateVideoForm.html", {"miFormulario":miFormulario})
 
 def busqueda(request):
-    return render(request, "AppBlog/templateBusqueda.html")
+    return render(request, "AppBlog/templateBusquedaPelicula.html")
+
+def buscar(request):
+    if(request.GET["nombreOriginal"]):
+        nombre = request.GET["nombreOriginal"]
+        peliculas = Pelicula.objects.filter(nombreOriginal__icontains = nombre)
+        return render(request, "AppBlog/templateResultadoBusquedaPelicula.html", {"peliculas": peliculas, "nombre": nombre})
+    else:
+        respuesta = "No enviaste datos :("
+    
+    return HttpResponse(respuesta)

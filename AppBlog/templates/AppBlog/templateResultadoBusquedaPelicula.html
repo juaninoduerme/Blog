@@ -1,0 +1,29 @@
+{% extends "AppBlog/templatePadre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+    <!--Template Búsqueda-->
+
+    <h1>Resultado de tu Búsqueda</h1>
+
+    <p>Estamos buscando una película llamada: {{nombre}}</p>
+
+    {% if peliculas %}
+
+    <h2>Tu resultado es:</h2>
+    <ul>
+    {% for pelicula in peliculas %}
+        <li>{{pelicula.nombreOriginal}}</li>
+        <li>{{pelicula.nombreTraduccion}}</li>
+        <li>{{pelicula.fechaDeEstreno}}</li>
+        <li>{{pelicula.genero}}</li>
+        <li>{{pelicula.director}}</li>
+        <li>{{pelicula.guionista}}</li>
+        <li>{{pelicula.sinopsis}}</li>
+    {% endfor %}
+
+    </ul>
+
+    {% endif %}
+    
+{% endblock %}
