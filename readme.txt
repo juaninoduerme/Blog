@@ -13,7 +13,7 @@ En la barra de navegación encontrarás las siguientes opciones:
 3. Series
 4. Videos
 5. Buscar Película
-5. Iniciar
+6. Iniciar
 
 1. Inicio
 Página principal y de bienvenida
