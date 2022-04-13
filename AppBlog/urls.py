@@ -4,7 +4,10 @@ from AppBlog import views
 urlpatterns = [
     path('', views.inicio, name="Inicio"),
     path('Peliculas', views.peliculas, name="Peliculas"),
+    path('Peliculas Formulario', views.peliculasFormulario, name="PeliculasFormulario"),
     path('Series', views.series, name="Series"),
-    path('Generos', views.generos, name="Generos"),
+    path('Series Formulario', views.seriesFormulario, name="SeriesFormulario"),
+    path('Videos', views.videos, name="Videos"),
+    path('Videos Formulario', views.videosFormulario, name="VideosFormulario"),
     path('Busqueda', views.busqueda, name="Busqueda"),
 ]
